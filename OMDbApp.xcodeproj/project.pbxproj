@@ -16,6 +16,13 @@
 		22A898A925EB7BE200F0C746 /* OMDbRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A898A725EB7BE200F0C746 /* OMDbRouter.swift */; };
 		22A898AA25EB7BE200F0C746 /* OMDbService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A898A825EB7BE200F0C746 /* OMDbService.swift */; };
 		22A898AE25EB7C7D00F0C746 /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A898AD25EB7C7D00F0C746 /* MoviesListViewController.swift */; };
+		22A898C825EB830B00F0C746 /* MovieListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A898C625EB830B00F0C746 /* MovieListCollectionViewCell.swift */; };
+		22A898D625EB832100F0C746 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A898D325EB832100F0C746 /* UIFont+.swift */; };
+		22A898D725EB832100F0C746 /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A898D425EB832100F0C746 /* UITableViewCell+.swift */; };
+		22A898D825EB832100F0C746 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A898D525EB832100F0C746 /* UIImage+.swift */; };
+		22A898DC25EB833400F0C746 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A898DB25EB833400F0C746 /* Functions.swift */; };
+		22A898E025EB838200F0C746 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A898DF25EB838200F0C746 /* MovieDetailsViewController.swift */; };
+		22A898F625EB842A00F0C746 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A898F525EB842A00F0C746 /* MovieListViewModel.swift */; };
 		433208BF2682D97DE3585C3C /* Pods_OMDbApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FCEE33514F1C9CA9724A3AC /* Pods_OMDbApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +39,13 @@
 		22A898A725EB7BE200F0C746 /* OMDbRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMDbRouter.swift; sourceTree = "<group>"; };
 		22A898A825EB7BE200F0C746 /* OMDbService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMDbService.swift; sourceTree = "<group>"; };
 		22A898AD25EB7C7D00F0C746 /* MoviesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
+		22A898C625EB830B00F0C746 /* MovieListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListCollectionViewCell.swift; sourceTree = "<group>"; };
+		22A898D325EB832100F0C746 /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		22A898D425EB832100F0C746 /* UITableViewCell+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
+		22A898D525EB832100F0C746 /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		22A898DB25EB833400F0C746 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		22A898DF25EB838200F0C746 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		22A898F525EB842A00F0C746 /* MovieListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
 		4FCEE33514F1C9CA9724A3AC /* Pods_OMDbApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMDbApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA449FDD160A607B50A017F0 /* Pods-OMDbApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDbApp.release.xcconfig"; path = "Target Support Files/Pods-OMDbApp/Pods-OMDbApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,9 +91,12 @@
 		22A8988025EB7A5E00F0C746 /* OMDbApp */ = {
 			isa = PBXGroup;
 			children = (
-				22A898AC25EB7C5700F0C746 /* MovieList */,
 				22A898A025EB7BCA00F0C746 /* Data Entities */,
+				22A898AC25EB7C5700F0C746 /* MovieList */,
+				22A898DE25EB834500F0C746 /* MovieDetails */,
 				22A898A625EB7BE200F0C746 /* Services */,
+				22A898D225EB832100F0C746 /* Extensions */,
+				22A898DA25EB833400F0C746 /* Utils */,
 				22A8988125EB7A5E00F0C746 /* AppDelegate.swift */,
 				22A8988325EB7A5E00F0C746 /* SceneDelegate.swift */,
 				22A8988A25EB7A6000F0C746 /* Assets.xcassets */,
@@ -110,9 +127,37 @@
 		22A898AC25EB7C5700F0C746 /* MovieList */ = {
 			isa = PBXGroup;
 			children = (
+				22A898F525EB842A00F0C746 /* MovieListViewModel.swift */,
 				22A898AD25EB7C7D00F0C746 /* MoviesListViewController.swift */,
+				22A898C625EB830B00F0C746 /* MovieListCollectionViewCell.swift */,
 			);
 			path = MovieList;
+			sourceTree = "<group>";
+		};
+		22A898D225EB832100F0C746 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				22A898D325EB832100F0C746 /* UIFont+.swift */,
+				22A898D425EB832100F0C746 /* UITableViewCell+.swift */,
+				22A898D525EB832100F0C746 /* UIImage+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		22A898DA25EB833400F0C746 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				22A898DB25EB833400F0C746 /* Functions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		22A898DE25EB834500F0C746 /* MovieDetails */ = {
+			isa = PBXGroup;
+			children = (
+				22A898DF25EB838200F0C746 /* MovieDetailsViewController.swift */,
+			);
+			path = MovieDetails;
 			sourceTree = "<group>";
 		};
 		F200036280F5C21FD86D4DD5 /* Pods */ = {
@@ -239,9 +284,16 @@
 			files = (
 				22A898A925EB7BE200F0C746 /* OMDbRouter.swift in Sources */,
 				22A8988225EB7A5E00F0C746 /* AppDelegate.swift in Sources */,
+				22A898D725EB832100F0C746 /* UITableViewCell+.swift in Sources */,
+				22A898F625EB842A00F0C746 /* MovieListViewModel.swift in Sources */,
+				22A898D625EB832100F0C746 /* UIFont+.swift in Sources */,
 				22A898AA25EB7BE200F0C746 /* OMDbService.swift in Sources */,
+				22A898DC25EB833400F0C746 /* Functions.swift in Sources */,
+				22A898C825EB830B00F0C746 /* MovieListCollectionViewCell.swift in Sources */,
 				22A8988425EB7A5E00F0C746 /* SceneDelegate.swift in Sources */,
 				22A898A425EB7BCA00F0C746 /* MovieList.swift in Sources */,
+				22A898E025EB838200F0C746 /* MovieDetailsViewController.swift in Sources */,
+				22A898D825EB832100F0C746 /* UIImage+.swift in Sources */,
 				22A898A325EB7BCA00F0C746 /* MovieDetails.swift in Sources */,
 				22A898AE25EB7C7D00F0C746 /* MoviesListViewController.swift in Sources */,
 			);
