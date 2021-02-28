@@ -13,9 +13,11 @@
 		22A8988925EB7A5E00F0C746 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22A8988725EB7A5E00F0C746 /* Main.storyboard */; };
 		22A8988B25EB7A6000F0C746 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22A8988A25EB7A6000F0C746 /* Assets.xcassets */; };
 		22A8988E25EB7A6000F0C746 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22A8988C25EB7A6000F0C746 /* LaunchScreen.storyboard */; };
+		433208BF2682D97DE3585C3C /* Pods_OMDbApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FCEE33514F1C9CA9724A3AC /* Pods_OMDbApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11CF8006AD3B6ABC8C3C025A /* Pods-OMDbApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDbApp.debug.xcconfig"; path = "Target Support Files/Pods-OMDbApp/Pods-OMDbApp.debug.xcconfig"; sourceTree = "<group>"; };
 		22A8987E25EB7A5E00F0C746 /* OMDbApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OMDbApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A8988125EB7A5E00F0C746 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22A8988325EB7A5E00F0C746 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		22A8988A25EB7A6000F0C746 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22A8988D25EB7A6000F0C746 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22A8988F25EB7A6000F0C746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FCEE33514F1C9CA9724A3AC /* Pods_OMDbApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMDbApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA449FDD160A607B50A017F0 /* Pods-OMDbApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDbApp.release.xcconfig"; path = "Target Support Files/Pods-OMDbApp/Pods-OMDbApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				433208BF2682D97DE3585C3C /* Pods_OMDbApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06EA65D20DE22FBC25FF358A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FCEE33514F1C9CA9724A3AC /* Pods_OMDbApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		22A8987525EB7A5E00F0C746 = {
 			isa = PBXGroup;
 			children = (
 				22A8988025EB7A5E00F0C746 /* OMDbApp */,
 				22A8987F25EB7A5E00F0C746 /* Products */,
+				F200036280F5C21FD86D4DD5 /* Pods */,
+				06EA65D20DE22FBC25FF358A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = OMDbApp;
 			sourceTree = "<group>";
 		};
+		F200036280F5C21FD86D4DD5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11CF8006AD3B6ABC8C3C025A /* Pods-OMDbApp.debug.xcconfig */,
+				DA449FDD160A607B50A017F0 /* Pods-OMDbApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22A8989225EB7A6000F0C746 /* Build configuration list for PBXNativeTarget "OMDbApp" */;
 			buildPhases = (
+				BAEBCD333E9AB28B9A7E19BE /* [CP] Check Pods Manifest.lock */,
 				22A8987A25EB7A5E00F0C746 /* Sources */,
 				22A8987B25EB7A5E00F0C746 /* Frameworks */,
 				22A8987C25EB7A5E00F0C746 /* Resources */,
+				34B394662190ABBF16C7AEC7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34B394662190ABBF16C7AEC7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OMDbApp/Pods-OMDbApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OMDbApp/Pods-OMDbApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OMDbApp/Pods-OMDbApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAEBCD333E9AB28B9A7E19BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OMDbApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		22A8987A25EB7A5E00F0C746 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		22A8989325EB7A6000F0C746 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11CF8006AD3B6ABC8C3C025A /* Pods-OMDbApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		22A8989425EB7A6000F0C746 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA449FDD160A607B50A017F0 /* Pods-OMDbApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
