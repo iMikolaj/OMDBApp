@@ -114,8 +114,8 @@ extension MoviesListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = MovieDetailsViewController()
         if let imdbID = viewModel.movieList.value?.search[indexPath.row].imdbID {
-//            vc.imdbID = imdbID
-//            present(vc, animated: true, completion: nil)
+            vc.imdbID = imdbID
+            present(vc, animated: true, completion: nil)
         }
     }
 }

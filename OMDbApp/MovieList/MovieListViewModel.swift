@@ -42,7 +42,7 @@ class MovieListViewModel {
             }
             
             if movieListLoadedCount < movieListTotalCount {
-                let pagesToBeLoaded = rowsToBePrefetched.filter{ $0 > movieListLoadedCount-1}.map{ $0 / 10 }.reduce([], removeDuplicates)
+                let pagesToBeLoaded = rowsToBePrefetched.filter{ $0 > movieListLoadedCount-1}.map{ ($0 / 10) + 1 }.reduce([], removeDuplicates)
                 for page in pagesToBeLoaded {
                     omdbService.getMovieList(searchPattern: searchText.value, page: page)
                         .subscribe(onNext: { fetchedMovieList in
